@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --color-navy-950: #0a1426;
+  --color-navy-900: #0f1c33;
+  --color-navy-800: #1a2a47;
+  --color-navy-700: #26385a;
+  --color-brand-50: #eff5ff;
+  --color-brand-100: #dbe8fe;
+  --color-brand-200: #bfd4fd;
+  --color-brand-300: #93b4fa;
+  --color-brand-400: #6492f5;
+  --color-brand-500: #3b74f0;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4fd0;
+  --color-brand-800: #1e3f9e;
+  --color-brand-900: #1b326f;
+  --color-page: #f6f7f9;
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--color-page);
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  /* Let grid columns shrink so wide tables scroll inside their card, not the page. */
+  .grid > * {
+    min-width: 0;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+  }
+}
